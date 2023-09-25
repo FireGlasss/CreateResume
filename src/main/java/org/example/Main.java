@@ -13,14 +13,14 @@ public class Main {
 
         FileInputStream file = null;
         try {
-            file = new FileInputStream("C:\\Users\\maidanovt\\Desktop\\AutoResume\\Get experts_Кочетков Алексей.docx");
+            file = new FileInputStream("C:\\Users\\maidanovt\\Desktop\\AutoResume\\Хусаинов_Максим_Маратович.docx");
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         XWPFDocument doc = new XWPFDocument(file);
-        XWPFParagraph paragraph = doc.getParagraphs().get(5); // получение первого параграфа
-        String text = paragraph.getText();
+        XWPFTable table = doc.getTable().; // получение первого параграфа
+        String text = table.getText();
 
         XWPFDocument newDoc = new XWPFDocument();
 
